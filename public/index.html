@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link type="image/png" href="./assets/img/logoo.png" rel="icon" />
+    <title>Britta Haßelmann</title>
+    <link href="build/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+
+</head>
+
+<body class="font-PTSans relative">
+    <div class="min-h-screen flex flex-col">
+        <nav id="nav" class="flex -lg:flex-wrap items-center justify-between -lg:p-4 fixed top-0 left-0 right-0 z-50 bg-white shadow">
+            <div class="flex justify-center items-center space-x-2 lg:pl-8">
+                <img src="./assets/img/logoo.png">
+                <p class="text-green font-Rubik font-bold sm:text-2xl">Britta Haßelmann</p>
+            </div>
+            <div onclick="togle()" class="block lg:hidden">
+                <button class="navbar-burger focus:outline-none flex items-center py-2 px-3 text-green rounded border border-green">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="menu1 -lg:hidden -lg:w-full -lg:my-8 flex -lg:flex-col justify-center lg:items-center lg:space-x-6 font-PTSans font-semibold text-lg">
+                <a class="" href="#">Über mich</a>
+                <a class="" href="#">Mein Wahlkreis </a>
+                <a class="" href="#">Themen</a>
+                <a class="" href="#">Kontakt</a>
+            </div>
+            <div class="menu2 -lg:hidden flex -lg:flex-col justify-center lg:items-center lg:space-x-4 font-PTSans font-semibold text-lg">
+                <div class="flex space-x-4 lg:justify-center lg:items-center lg:space-x-4">
+                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.58 0.319527C19.74 0.852071 18.795 1.27811 17.85 1.38462C17.01 0.426036 15.96 0 14.7 0C12.285 0 10.29 2.13018 10.395 4.57988C10.395 4.89941 10.395 5.32544 10.5 5.64497C7.035 5.43195 3.78 3.72781 1.575 0.852071C1.155 1.59763 0.945 2.3432 1.05 3.19527C1.05 4.68639 1.785 6.07101 2.94 7.02959C2.205 7.02959 1.575 6.81657 0.945002 6.49704V6.39053C0.945002 8.52071 2.31 10.4379 4.41 10.8639C3.99 10.9704 3.675 11.0769 3.255 11.0769C2.94 11.0769 2.73 11.0769 2.415 10.9704C2.94 12.7811 4.515 14.0592 6.405 14.1657C4.935 15.4438 3.045 16.0828 1.05 16.0828C0.735 16.0828 0.315 16.0828 0 15.9763C1.995 17.3609 4.2 18 6.615 18C14.595 18 18.9 11.0769 18.9 5.00592V4.47337C19.74 3.83432 20.475 2.98225 21 2.13018C20.265 2.4497 19.425 2.76923 18.48 2.87574C19.53 2.23669 20.265 1.38462 20.58 0.319527Z"
+                            fill="#282828" />
+                    </svg>
+                    <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M29.3819 3.28673C29.0361 2.00156 28.0228 0.988536 26.7379 0.642469C24.3902 0 14.9997 0 14.9997 0C14.9997 0 5.60941 0 3.26178 0.617978C2.00156 0.963817 0.963588 2.00179 0.61775 3.28673C0 5.63413 0 10.5024 0 10.5024C0 10.5024 0 15.3952 0.61775 17.7181C0.963817 19.0031 1.97684 20.0163 3.26201 20.3624C5.63413 21.0049 14.9999 21.0049 14.9999 21.0049C14.9999 21.0049 24.3902 21.0049 26.7379 20.3869C28.023 20.041 29.0361 19.0278 29.3821 17.7428C29.9999 15.3952 29.9999 10.5271 29.9999 10.5271C29.9999 10.5271 30.0246 5.63413 29.3819 3.28673Z"
+                            fill="#282828" />
+                        <path d="M12.0098 14.9999L19.8185 10.5024L12.0098 6.00488V14.9999Z" fill="white" />
+                    </svg>
+                    <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.58975 6.01521V4.41521V3.91521C5.58975 3.81521 5.68955 3.61521 5.68955 3.51521C5.78835 3.41521 5.88915 3.31521 6.08875 3.21521C6.28735 3.11521 6.58774 3.11521 6.78634 3.11521H8.28333V0.0152063H5.78835C4.69156 -0.0847937 3.49297 0.315206 2.69558 1.01521C1.99598 1.91521 1.69758 2.91521 1.79738 4.01521V5.91521H0V9.01521H1.79738V18.1152H5.48895V9.01521H7.98393L8.28333 5.91521H5.58975V6.01521Z"
+                            fill="#282828" />
+                    </svg>
+                </div>
+                <button class="lg:bg-green -lg:text-left -lg:mt-2 lg:text-white lg:h-full lg:py-5 lg:px-8 focus:outline-none">
+                    Newsletter abonnieren
+                </button>
+            </div>
+        </nav>
+        <div class="flex-1 flex items-center relative -lg:px-4 mt-16">
+            <img src="./assets/img/hero.png" class="absolute inset-0 h-full object-cover -lg:object-right">
+            <h1 class="font-Arvo -md:text-4xl text-6xl container mx-auto text-white relative z-10 -lg:text-center">Britta Haßelmann</h1>
+        </div>
+        <div class="lg:h-32 bg-gray-200 flex justify-center items-center text-xl sm:text-2xl text-center font-Arvo -lg:px-4 -lg:py-8">
+            <p class="lg:w-60p mx-auto -lg:leading-tight">
+                <span class="text-green">Erste Parlamentarische Geschäftsführerin</span>,
+                kommunalpolitische Sprecherin der Bundestagsfraktion Bündnis 90/Die Grünen</p>
+        </div>
+    </div>
+    <div class="container mx-auto py-16 ">
+        <div class="border-l-2 border-green px-4 -lg:ml-4 lg:-ml-5">
+            <h1 class="font-Arvo text-4xl">Über Mich</h1>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 mt-8 items-center -lg:px-4">
+            <div class="flex flex-col space-y-8">
+                <div class="flex flex-col">
+                    <p><b>Am 10. Dezember 1961</b> wurde ich in Straelen am Niederrhein geboren und wuchs dort auf. Nach
+                        dem
+                        Abitur am Mädchengymnasium in Geldern kam ich 1983 ich zum Studieren nach Bielefeld.</p>
+                    <br />
+                    <p>Ich bin Dipl. Sozialarbeiterin und arbeitete seit 1985 in einem Kollektiv-Betrieb und
+                        gemeinnützigen
+                        Verein, der Bielefelder Selbsthilfe e.V. in den Bereichen Arbeit und Beschäftigung, Psychiatrie
+                        und
+                        Gesundheit.</p>
+                    <br />
+                    <p>Bis heute <b>lebe ich gerne in Bielefeld</b> – einer Stadt, in der für mich die Mischung stimmt.
+                        Bielefeld
+                        ist eine Großstadt im Grünen. Universität und Kultur, Industrie, Wirtschaft und Dienstleistung.
+                        Ein
+                        lebendiges kulturelles Angebot prägt das Bild der Stadt. Viele Menschen engagieren sich in
+                        Vereinen
+                        und Initiativen und machen mit viel Kreativität und Ideen diese Stadt unverwechselbar. Deshalb
+                        kann
+                        ich den “Zweiflern” in Berlin auch entgegnen: Bielefeld gibt es sehr wohl! Und es ist schön hier
+                        zu
+                        leben.</p>
+                </div>
+                <svg width="69" height="45" viewBox="0 0 69 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M53.4211 0C44.6115 0 37.6555 7.14272 37.6555 15.9524C37.6555 24.762 44.8908 31.9047 53.7004 31.9047C53.7886 31.9047 53.9215 31.8928 54.0096 31.8913C50.5264 34.665 46.1514 36.3364 41.3627 36.3364C39.1596 36.3364 37.3866 38.1229 37.3866 40.3245C37.3866 42.5262 38.8041 44.3126 41.0072 44.3126C56.6444 44.3111 69.0001 31.5896 69.0001 15.9524C69.0001 15.9494 69.0001 15.9464 69.0001 15.9419C69.0001 7.13674 62.2278 0 53.4211 0Z"
+                        fill="#3CB4E7" />
+                    <path
+                        d="M16.0569 0C7.24727 0 0.279316 7.14272 0.279316 15.9524C0.279316 24.762 7.50866 31.9047 16.3198 31.9047C16.4079 31.9047 16.5379 31.8928 16.626 31.8913C13.1428 34.665 8.76633 36.3364 3.97764 36.3364C1.77448 36.3364 0 38.1229 0 40.3245C0 42.5262 1.43989 44.3126 3.64305 44.3126C19.2803 44.3111 31.6583 31.5896 31.6583 15.9524C31.6583 15.9494 31.6583 15.9464 31.6583 15.9419C31.6583 7.13674 24.8636 0 16.0569 0Z"
+                        fill="#3CB4E7" />
+                </svg>
+                <div class="font-bold text-xl">
+                    Sich einmischen, anpacken, etwas bewegen wollen und sich mit Ungerechtigkeiten nicht abfinden
+                    können, sind bis heute mein Antrieb, politisch aktiv zu sein.
+                </div>
+                <div class="flex flex-col">
+                    <p>Seit vielen Jahren bestimmen die Grünen in Bielefeld die Geschicke der Kommunalpolitik maßgeblich
+                        mit. <b>Ich bin seit 1989 für die Grünen politisch aktiv und seit 1994 Mitglied von Bündnis
+                            90/Die
+                            Grünen.</b> Über zehn Jahre habe ich ehrenamtlich in der Kommunalpolitik gearbeitet,
+                        zunächst als
+                        parteilose Initiativenvertreterin, später als Fraktionsvorsitzende der Bielefelder Grünen. Ab
+                        Juli
+                        2000 bis Anfang 2006 habe ich den mitgliederstärksten Landesverband von Bündnis 90/Die Grünen
+                        als
+                        Landesvorsitzende vertreten.</p>
+                    <br />
+                    <p><b>Im Oktober 2005</b> wurde ich erstmals Mitglied des Deutschen Bundestages. Seit der 18.
+                        Legislaturperiode bin ich Erste Parlamentarische Geschäftsführerin meiner Fraktion. <b>2017 bin
+                            ich
+                            über die Landesliste der nordrhein-westfälischen Grünen wieder in den Bundestag
+                            eingezogen.</b></p>
+                    <br />
+                    <p>Ich verbringe viel Zeit im Zug zwischen Bielefeld, Berlin und NRW oder anderswo und freue mich
+                        mit
+                        Bündnis 90/Die Grünen weiter für ein gerechtes, weltoffenes Land zu streiten, welches nicht auf
+                        Kosten künftiger Generationen und Menschen in anderen Ländern lebt.</p>
+                    <br />
+                    <p>Besuchen Sie mivch in Berlin</p>
+                </div>
+            </div>
+            <div class="-lg:mt-8">
+                <img src="./assets/img/image1.png" class="mx-auto lg:w-80p">
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto py-16 -lg:px-4">
+        <div class="flex justify-between items-center">
+            <div class="border-l-2 border-green px-4 -ml-5 flex -md:flex-col md:justify-center md:items-center">
+                <h1 class="font-Arvo text-4xl">Video</h1>
+                <p class="font-Taviraj text-green md:ml-4 text-xl">@Britta Haßelmann</p>
+            </div>
+            <div class="flex justify-center items-center space-x-2">
+                <svg width="45" height="45" class="cursor-pointer w-8 h-8" viewBox="0 0 45 45" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle r="21.5" transform="matrix(-1 0 0 1 22.5 22.5)" stroke="#25A93D" stroke-width="2" />
+                    <path d="M22.5879 14.0395L14.4134 22.214L14.8122 22.6128L22.9867 14.4383L22.5879 14.0395Z"
+                        stroke="#25A93D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M22.9867 30.1892L14.8122 22.0147L14.4134 22.4134L22.5879 30.588L22.9867 30.1892Z"
+                        stroke="#25A93D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M14.7684 22.5957H31.4043L31.4043 22.0318L14.7684 22.0318L14.7684 22.5957Z"
+                        stroke="#25A93D" />
+                </svg>
+                <svg width="45" height="45" class="cursor-pointer w-8 h-8" viewBox="0 0 45 45" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="22.5" cy="22.5" r="21.5" stroke="#25A93D" stroke-width="2" />
+                    <path d="M22.4121 14.0395L30.5866 22.214L30.1878 22.6128L22.0133 14.4383L22.4121 14.0395Z"
+                        stroke="#25A93D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M22.0133 30.1892L30.1878 22.0147L30.5866 22.4134L22.4121 30.588L22.0133 30.1892Z"
+                        stroke="#25A93D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M30.2316 22.5957H13.5957L13.5957 22.0318L30.2316 22.0318L30.2316 22.5957Z"
+                        stroke="#25A93D" />
+                </svg>
+
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-16">
+            <div class="relative -md:mx-auto">
+                <img src="./assets/img/video1.png">
+                <div
+                    class="transition ease-in-out duration-500 absolute inset-0 p-4 bg-black opacity-0 hover:opacity-100 hover:bg-opacity-25 text-white font-semibold flex flex-col">
+                    <div class="flex">
+                        <h1 class="md:text-xl">Rede zu Demokratie und Erinnerungskultur im Bundestag</h1>
+                        <svg class="cursor-pointer" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.11106 1H20.3333V1.88889H2.11106V1Z" stroke="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.6666 19.4444V1.22222H20.5555V19.4444H19.6666Z" stroke="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20.363 1.82109L1.82104 20.363L1.1925 19.7345L19.7344 1.19255L20.363 1.82109Z"
+                                stroke="white" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 flex justify-center items-center cursor-pointer -mt-4 -md:w-10 -md:mx-auto">
+                        <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="35" cy="35" r="35" fill="#25A93D" />
+                            <path d="M47 34.5L29 47.0574L29 21.9426L47 34.5Z" fill="white" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="relative -md:mx-auto">
+                <img src="./assets/img/video2.png">
+                <div
+                    class="transition ease-in-out duration-500 absolute inset-0 p-4 bg-black opacity-0 hover:opacity-100 hover:bg-opacity-25 text-white font-semibold flex flex-col">
+                    <div class="flex">
+                        <h1 class="md:text-xl">Rede zu Demokratie und Erinnerungskultur im Bundestag</h1>
+                        <svg class="cursor-pointer" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.11106 1H20.3333V1.88889H2.11106V1Z" stroke="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.6666 19.4444V1.22222H20.5555V19.4444H19.6666Z" stroke="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20.363 1.82109L1.82104 20.363L1.1925 19.7345L19.7344 1.19255L20.363 1.82109Z"
+                                stroke="white" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 flex justify-center items-center cursor-pointer -mt-4 -md:w-10 -md:mx-auto">
+                        <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="35" cy="35" r="35" fill="#25A93D" />
+                            <path d="M47 34.5L29 47.0574L29 21.9426L47 34.5Z" fill="white" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="relative -md:mx-auto">
+                <img src="./assets/img/video3.png">
+                <div
+                    class="transition ease-in-out duration-500 absolute inset-0 p-4 bg-black opacity-0 hover:opacity-100 hover:bg-opacity-25 text-white font-semibold flex flex-col">
+                    <div class="flex">
+                        <h1 class="md:text-xl">Rede zu Demokratie und Erinnerungskultur im Bundestag</h1>
+                        <svg class="cursor-pointer" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.11106 1H20.3333V1.88889H2.11106V1Z" stroke="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.6666 19.4444V1.22222H20.5555V19.4444H19.6666Z" stroke="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20.363 1.82109L1.82104 20.363L1.1925 19.7345L19.7344 1.19255L20.363 1.82109Z"
+                                stroke="white" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 flex justify-center items-center cursor-pointer -mt-4 -md:w-10 -md:mx-auto">
+                        <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="35" cy="35" r="35" fill="#25A93D" />
+                            <path d="M47 34.5L29 47.0574L29 21.9426L47 34.5Z" fill="white" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-5 lg:col-span-3">
+                <div class="relative">
+                    <img src="./assets/img/video4.png">
+                    <div
+                        class="transition ease-in-out duration-500 absolute inset-0 p-4 bg-black opacity-0 hover:opacity-100 hover:bg-opacity-25 text-white font-semibold flex flex-col">
+                        <div class="flex justify-between">
+                            <h1 class="md:text-xl w-80p">Rede zu Demokratie und Erinnerungskultur im Bundestag</h1>
+                            <svg class="cursor-pointer" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.11106 1H20.3333V1.88889H2.11106V1Z" stroke="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.6666 19.4444V1.22222H20.5555V19.4444H19.6666Z" stroke="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.363 1.82109L1.82104 20.363L1.1925 19.7345L19.7344 1.19255L20.363 1.82109Z"
+                                    stroke="white" />
+                            </svg>
+                        </div>
+                        <div class="flex-1 flex justify-center items-center cursor-pointer -mt-4 -md:w-10 -md:mx-auto">
+                            <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="35" cy="35" r="35" fill="#25A93D" />
+                                <path d="M47 34.5L29 47.0574L29 21.9426L47 34.5Z" fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="./assets/img/video5.png">
+                    <div
+                        class="transition ease-in-out duration-500 absolute inset-0 p-4 bg-black opacity-0 hover:opacity-100 hover:bg-opacity-25 text-white font-semibold flex flex-col">
+                        <div class="flex justify-between">
+                            <h1 class="md:text-xl w-80p">Rede zu Demokratie und Erinnerungskultur im Bundestag</h1>
+                            <svg class="cursor-pointer" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.11106 1H20.3333V1.88889H2.11106V1Z" stroke="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.6666 19.4444V1.22222H20.5555V19.4444H19.6666Z" stroke="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.363 1.82109L1.82104 20.363L1.1925 19.7345L19.7344 1.19255L20.363 1.82109Z"
+                                    stroke="white" />
+                            </svg>
+                        </div>
+                        <div class="flex-1 flex justify-center items-center cursor-pointer -mt-4 -md:w-10 -md:mx-auto">
+                            <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="35" cy="35" r="35" fill="#25A93D" />
+                                <path d="M47 34.5L29 47.0574L29 21.9426L47 34.5Z" fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto py-16">
+        <div class="border-l-2 border-green px-4 lg:-ml-5">
+            <h1 class="font-Arvo text-4xl">Meine Themen</h1>
+        </div>
+        <div style="background-color: #F5F5F5;" class="flex justify-between items-center mt-8 md:mt-16">
+            <ul class="flex flex-col sm:flex-row justify-center md:items-center">
+                <li class="py-4 border-b-2 border-blue-500 px-4 cursor-pointer hover:-py-2 font-semibold">Im Bundestag
+                </li>
+                <li
+                    class="py-4 hover:border-b-2 hover:border-blue-500 px-4 cursor-pointer hover:-py-2 hover:font-semibold">
+                    Für Kommunen</li>
+                <li
+                    class="py-4 hover:border-b-2 hover:border-blue-500 px-4 cursor-pointer hover:-py-2 hover:font-semibold">
+                    Im Wahlkreis</li>
+            </ul>
+            <div class="flex justify-center items-center space-x-1 px-4">
+                <svg width="45" height="45" class="cursor-pointer w-8 h-8" viewBox="0 0 45 45" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle r="21.5" transform="matrix(-1 0 0 1 22.5 22.5)" stroke="#25A93D" stroke-width="2" />
+                    <path d="M22.5879 14.0395L14.4134 22.214L14.8122 22.6128L22.9867 14.4383L22.5879 14.0395Z"
+                        stroke="#25A93D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M22.9867 30.1892L14.8122 22.0147L14.4134 22.4134L22.5879 30.588L22.9867 30.1892Z"
+                        stroke="#25A93D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M14.7684 22.5957H31.4043L31.4043 22.0318L14.7684 22.0318L14.7684 22.5957Z"
+                        stroke="#25A93D" />
+                </svg>
+                <svg width="45" height="45" class="cursor-pointer w-8 h-8" viewBox="0 0 45 45" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="22.5" cy="22.5" r="21.5" stroke="#25A93D" stroke-width="2" />
+                    <path d="M22.4121 14.0395L30.5866 22.214L30.1878 22.6128L22.0133 14.4383L22.4121 14.0395Z"
+                        stroke="#25A93D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M22.0133 30.1892L30.1878 22.0147L30.5866 22.4134L22.4121 30.588L22.0133 30.1892Z"
+                        stroke="#25A93D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M30.2316 22.5957H13.5957L13.5957 22.0318L30.2316 22.0318L30.2316 22.5957Z"
+                        stroke="#25A93D" />
+                </svg>
+
+            </div>
+        </div>
+        <div class="grid -sm:grid-cols-1 -lg:grid-cols-2 grid-cols-3 gap-5 mt-16 -lg:px-4">
+            <div class="shadow-md p-8 flex flex-col space-y-4">
+                <span class="text-blue-500">10. März 2020</span>
+                <h1 class="font-bold">Bundestagsrede: Kommunen sollen selbst über Rekommunalisierung entscheiden</h1>
+                <p>The New York Film Academy is pleased to announce our National Tour for 2020. Come meet us as we
+                    travel the country, conducting Auditions & Portfolio Reviews.</p>
+                <div class="flex items-center space-x-2">
+                    <p>Read More</p>
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.88788 1.40253L17.8732 9.3879L17.4837 9.77743L9.49835 1.79206L9.88788 1.40253Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.49835 17.1785L17.4837 9.19313L17.8732 9.58266L9.88788 17.568L9.49835 17.1785Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.5264 9.76072H1.27551L1.27551 9.20984L17.5264 9.20984L17.5264 9.76072Z"
+                            stroke="#25A93D" />
+                    </svg>
+                </div>
+            </div>
+            <div class="shadow-md p-8 flex flex-col space-y-4">
+                <span class="text-blue-500">10. März 2020</span>
+                <h1 class="font-bold">Bundestagsrede: Kommunen sollen selbst über Rekommunalisierung entscheiden</h1>
+                <p>The New York Film Academy is pleased to announce our National Tour for 2020. Come meet us as we
+                    travel the country, conducting Auditions & Portfolio Reviews.</p>
+                <div class="flex items-center space-x-2">
+                    <p>Read More</p>
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.88788 1.40253L17.8732 9.3879L17.4837 9.77743L9.49835 1.79206L9.88788 1.40253Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.49835 17.1785L17.4837 9.19313L17.8732 9.58266L9.88788 17.568L9.49835 17.1785Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.5264 9.76072H1.27551L1.27551 9.20984L17.5264 9.20984L17.5264 9.76072Z"
+                            stroke="#25A93D" />
+                    </svg>
+                </div>
+            </div>
+            <div class="shadow-md p-8 flex flex-col space-y-4">
+                <span class="text-blue-500">10. März 2020</span>
+                <h1 class="font-bold">Bundestagsrede: Kommunen sollen selbst über Rekommunalisierung entscheiden</h1>
+                <p>The New York Film Academy is pleased to announce our National Tour for 2020. Come meet us as we
+                    travel the country, conducting Auditions & Portfolio Reviews.</p>
+                <div class="flex items-center space-x-2">
+                    <p>Read More</p>
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.88788 1.40253L17.8732 9.3879L17.4837 9.77743L9.49835 1.79206L9.88788 1.40253Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.49835 17.1785L17.4837 9.19313L17.8732 9.58266L9.88788 17.568L9.49835 17.1785Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.5264 9.76072H1.27551L1.27551 9.20984L17.5264 9.20984L17.5264 9.76072Z"
+                            stroke="#25A93D" />
+                    </svg>
+                </div>
+            </div>
+            <div class="shadow-md p-8 flex flex-col space-y-4">
+                <span class="text-blue-500">10. März 2020</span>
+                <h1 class="font-bold">Bundestagsrede: Kommunen sollen selbst über Rekommunalisierung entscheiden</h1>
+                <p>The New York Film Academy is pleased to announce our National Tour for 2020. Come meet us as we
+                    travel the country, conducting Auditions & Portfolio Reviews.</p>
+                <div class="flex items-center space-x-2">
+                    <p>Read More</p>
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.88788 1.40253L17.8732 9.3879L17.4837 9.77743L9.49835 1.79206L9.88788 1.40253Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.49835 17.1785L17.4837 9.19313L17.8732 9.58266L9.88788 17.568L9.49835 17.1785Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.5264 9.76072H1.27551L1.27551 9.20984L17.5264 9.20984L17.5264 9.76072Z"
+                            stroke="#25A93D" />
+                    </svg>
+                </div>
+            </div>
+            <div class="shadow-md p-8 flex flex-col space-y-4">
+                <span class="text-blue-500">10. März 2020</span>
+                <h1 class="font-bold">Bundestagsrede: Kommunen sollen selbst über Rekommunalisierung entscheiden</h1>
+                <p>The New York Film Academy is pleased to announce our National Tour for 2020. Come meet us as we
+                    travel the country, conducting Auditions & Portfolio Reviews.</p>
+                <div class="flex items-center space-x-2">
+                    <p>Read More</p>
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.88788 1.40253L17.8732 9.3879L17.4837 9.77743L9.49835 1.79206L9.88788 1.40253Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.49835 17.1785L17.4837 9.19313L17.8732 9.58266L9.88788 17.568L9.49835 17.1785Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.5264 9.76072H1.27551L1.27551 9.20984L17.5264 9.20984L17.5264 9.76072Z"
+                            stroke="#25A93D" />
+                    </svg>
+                </div>
+            </div>
+            <div class="shadow-md p-8 flex flex-col space-y-4">
+                <span class="text-blue-500">10. März 2020</span>
+                <h1 class="font-bold">Bundestagsrede: Kommunen sollen selbst über Rekommunalisierung entscheiden</h1>
+                <p>The New York Film Academy is pleased to announce our National Tour for 2020. Come meet us as we
+                    travel the country, conducting Auditions & Portfolio Reviews.</p>
+                <div class="flex items-center space-x-2">
+                    <p>Read More</p>
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.88788 1.40253L17.8732 9.3879L17.4837 9.77743L9.49835 1.79206L9.88788 1.40253Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.49835 17.1785L17.4837 9.19313L17.8732 9.58266L9.88788 17.568L9.49835 17.1785Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.5264 9.76072H1.27551L1.27551 9.20984L17.5264 9.20984L17.5264 9.76072Z"
+                            stroke="#25A93D" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #F5F5F5;">
+        <div class="container mx-auto py-16">
+            <div class="border-l-2 border-green px-4 md:-ml-5">
+                <h1 class="font-Arvo text-4xl">Presse</h1>
+            </div>
+            <div class="flex justify-between items-center mt-8 md:mt-16 bg-white">
+                <ul class="flex flex-col sm:flex-row justify-center items-center">
+                    <li class="py-4 border-b-2 border-blue-500 px-4 cursor-pointer hover:-py-2 font-semibold">Im
+                        Bundestag</li>
+                    <li
+                        class="py-4 hover:border-b-2 hover:border-blue-500 px-4 cursor-pointer hover:-py-2 hover:font-semibold">
+                        Für Kommunen</li>
+                    <li
+                        class="py-4 hover:border-b-2 hover:border-blue-500 px-4 cursor-pointer hover:-py-2 hover:font-semibold">
+                        Im Wahlkreis</li>
+                </ul>
+                <div class="flex justify-center items-center space-x-1 px-4">
+                    <svg width="45" height="45" class="cursor-pointer w-8 h-8" viewBox="0 0 45 45" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle r="21.5" transform="matrix(-1 0 0 1 22.5 22.5)" stroke="#25A93D" stroke-width="2" />
+                        <path d="M22.5879 14.0395L14.4134 22.214L14.8122 22.6128L22.9867 14.4383L22.5879 14.0395Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M22.9867 30.1892L14.8122 22.0147L14.4134 22.4134L22.5879 30.588L22.9867 30.1892Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M14.7684 22.5957H31.4043L31.4043 22.0318L14.7684 22.0318L14.7684 22.5957Z"
+                            stroke="#25A93D" />
+                    </svg>
+                    <svg width="45" height="45" class="cursor-pointer w-8 h-8" viewBox="0 0 45 45" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="22.5" cy="22.5" r="21.5" stroke="#25A93D" stroke-width="2" />
+                        <path d="M22.4121 14.0395L30.5866 22.214L30.1878 22.6128L22.0133 14.4383L22.4121 14.0395Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M22.0133 30.1892L30.1878 22.0147L30.5866 22.4134L22.4121 30.588L22.0133 30.1892Z"
+                            stroke="#25A93D" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M30.2316 22.5957H13.5957L13.5957 22.0318L30.2316 22.0318L30.2316 22.5957Z"
+                            stroke="#25A93D" />
+                    </svg>
+
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-5 mt-16 -md:px-4">
+                <div class="relative shadow-md bg-white">
+                    <div class="flex flex-col space-y-6 p-8">
+                        <span class="text-blue-500">10. März 2020</span>
+                        <h1 class="font-bold">Bundestagsrede: Kommunen sollen selbst über Rekommunalisierung entscheiden
+                        </h1>
+                        <p>The New York Film Academy is pleased to announce our National Tour for 2020. Come meet us as
+                            we travel the country, conducting Auditions & Portfolio Reviews.</p>
+                        <div class="flex items-center space-x-4">
+                            <p>Read More</p>
+                            <svg width="21" height="22" class="w-4 h-4" viewBox="0 0 21 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.91856 1H20.1408V1.88889H1.91856V1Z" stroke="#3CB4E7" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.4741 19.4444V1.22222H20.363V19.4444H19.4741Z" stroke="#3CB4E7" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.1705 1.82109L1.62854 20.363L1 19.7345L19.5419 1.19255L20.1705 1.82109Z"
+                                    stroke="#3CB4E7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <svg width="60" class="absolute top-0 right-0" height="60" viewBox="0 0 60 60" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="60" height="60" fill="#3CB4E7" />
+                        <path
+                            d="M46.3158 20.1808H38.4446V14.0357C38.4446 13.4637 37.9808 13 37.4089 13H13.0357C12.4637 13 12 13.4637 12 14.0357V40.8255C12 43.6809 14.323 46.0039 17.1784 46.0039H42.173C45.0284 46.0039 47.3515 43.6809 47.3515 40.8255V21.2165C47.3515 20.6445 46.8878 20.1808 46.3158 20.1808ZM17.1784 43.9325C15.4652 43.9325 14.0714 42.5387 14.0714 40.8255V15.0714H36.3732C36.3732 42.4457 36.3601 40.9238 36.3969 41.3141C36.487 42.2743 36.845 43.1797 37.4113 43.9325H17.1784ZM45.2801 40.8255C45.2801 42.5387 43.8863 43.9325 42.173 43.9325C41.9406 43.9325 41.7798 43.9325 41.5516 43.9325C39.8384 43.9325 38.4446 42.5387 38.4446 40.8255V22.2521H45.2801V40.8255Z"
+                            fill="white" />
+                        <path
+                            d="M32.9899 17.9712H17.5237C16.9517 17.9712 16.488 18.4349 16.488 19.0069C16.488 19.5789 16.9517 20.0426 17.5237 20.0426H32.9899C33.5619 20.0426 34.0256 19.5789 34.0256 19.0069C34.0256 18.4349 33.5619 17.9712 32.9899 17.9712Z"
+                            fill="white" />
+                        <path
+                            d="M32.9899 22.3901H17.5237C16.9517 22.3901 16.488 22.8538 16.488 23.4258C16.488 23.9978 16.9517 24.4615 17.5237 24.4615H32.9899C33.5619 24.4615 34.0256 23.9978 34.0256 23.4258C34.0256 22.8538 33.5619 22.3901 32.9899 22.3901Z"
+                            fill="white" />
+                        <path
+                            d="M32.9899 38.9614H17.5237C16.9517 38.9614 16.488 39.4251 16.488 39.9971C16.488 40.5691 16.9517 41.0328 17.5237 41.0328H32.9899C33.5619 41.0328 34.0256 40.5691 34.0256 39.9971C34.0256 39.4251 33.5619 38.9614 32.9899 38.9614Z"
+                            fill="white" />
+                        <path
+                            d="M32.99 26.8091H25.2568C24.6848 26.8091 24.2211 27.2728 24.2211 27.8448V35.5779C24.2211 36.1499 24.6848 36.6136 25.2568 36.6136H32.99C33.5619 36.6136 34.0256 36.1499 34.0256 35.5779V27.8448C34.0256 27.2728 33.5619 26.8091 32.99 26.8091ZM31.9543 34.5422H26.2925V28.8805H31.9543V34.5422Z"
+                            fill="white" />
+                        <path
+                            d="M17.5237 30.5377H20.8379C21.4098 30.5377 21.8736 30.074 21.8736 29.502C21.8736 28.93 21.4098 28.4663 20.8379 28.4663H17.5237C16.9517 28.4663 16.488 28.93 16.488 29.502C16.488 30.074 16.9517 30.5377 17.5237 30.5377Z"
+                            fill="white" />
+                        <path
+                            d="M17.5237 34.9566H20.8379C21.4098 34.9566 21.8736 34.4929 21.8736 33.9209C21.8736 33.349 21.4098 32.8853 20.8379 32.8853H17.5237C16.9517 32.8853 16.488 33.349 16.488 33.9209C16.488 34.4929 16.9517 34.9566 17.5237 34.9566Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <div class="relative shadow-md bg-white">
+                    <div class="flex flex-col space-y-6 p-8">
+                        <span class="text-blue-500">10. März 2020</span>
+                        <h1 class="font-bold">Bundestagsrede: Kommunen sollen selbst über Rekommunalisierung entscheiden
+                        </h1>
+                        <p>The New York Film Academy is pleased to announce our National Tour for 2020. Come meet us as
+                            we travel the country, conducting Auditions & Portfolio Reviews.</p>
+                        <div class="flex items-center space-x-4">
+                            <p>Read More</p>
+                            <svg width="21" height="22" class="w-4 h-4" viewBox="0 0 21 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.91856 1H20.1408V1.88889H1.91856V1Z" stroke="#3CB4E7" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.4741 19.4444V1.22222H20.363V19.4444H19.4741Z" stroke="#3CB4E7" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.1705 1.82109L1.62854 20.363L1 19.7345L19.5419 1.19255L20.1705 1.82109Z"
+                                    stroke="#3CB4E7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <svg width="60" class="absolute top-0 right-0" height="60" viewBox="0 0 60 60" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="60" height="60" fill="#3CB4E7" />
+                        <path
+                            d="M46.3158 20.1808H38.4446V14.0357C38.4446 13.4637 37.9808 13 37.4089 13H13.0357C12.4637 13 12 13.4637 12 14.0357V40.8255C12 43.6809 14.323 46.0039 17.1784 46.0039H42.173C45.0284 46.0039 47.3515 43.6809 47.3515 40.8255V21.2165C47.3515 20.6445 46.8878 20.1808 46.3158 20.1808ZM17.1784 43.9325C15.4652 43.9325 14.0714 42.5387 14.0714 40.8255V15.0714H36.3732C36.3732 42.4457 36.3601 40.9238 36.3969 41.3141C36.487 42.2743 36.845 43.1797 37.4113 43.9325H17.1784ZM45.2801 40.8255C45.2801 42.5387 43.8863 43.9325 42.173 43.9325C41.9406 43.9325 41.7798 43.9325 41.5516 43.9325C39.8384 43.9325 38.4446 42.5387 38.4446 40.8255V22.2521H45.2801V40.8255Z"
+                            fill="white" />
+                        <path
+                            d="M32.9899 17.9712H17.5237C16.9517 17.9712 16.488 18.4349 16.488 19.0069C16.488 19.5789 16.9517 20.0426 17.5237 20.0426H32.9899C33.5619 20.0426 34.0256 19.5789 34.0256 19.0069C34.0256 18.4349 33.5619 17.9712 32.9899 17.9712Z"
+                            fill="white" />
+                        <path
+                            d="M32.9899 22.3901H17.5237C16.9517 22.3901 16.488 22.8538 16.488 23.4258C16.488 23.9978 16.9517 24.4615 17.5237 24.4615H32.9899C33.5619 24.4615 34.0256 23.9978 34.0256 23.4258C34.0256 22.8538 33.5619 22.3901 32.9899 22.3901Z"
+                            fill="white" />
+                        <path
+                            d="M32.9899 38.9614H17.5237C16.9517 38.9614 16.488 39.4251 16.488 39.9971C16.488 40.5691 16.9517 41.0328 17.5237 41.0328H32.9899C33.5619 41.0328 34.0256 40.5691 34.0256 39.9971C34.0256 39.4251 33.5619 38.9614 32.9899 38.9614Z"
+                            fill="white" />
+                        <path
+                            d="M32.99 26.8091H25.2568C24.6848 26.8091 24.2211 27.2728 24.2211 27.8448V35.5779C24.2211 36.1499 24.6848 36.6136 25.2568 36.6136H32.99C33.5619 36.6136 34.0256 36.1499 34.0256 35.5779V27.8448C34.0256 27.2728 33.5619 26.8091 32.99 26.8091ZM31.9543 34.5422H26.2925V28.8805H31.9543V34.5422Z"
+                            fill="white" />
+                        <path
+                            d="M17.5237 30.5377H20.8379C21.4098 30.5377 21.8736 30.074 21.8736 29.502C21.8736 28.93 21.4098 28.4663 20.8379 28.4663H17.5237C16.9517 28.4663 16.488 28.93 16.488 29.502C16.488 30.074 16.9517 30.5377 17.5237 30.5377Z"
+                            fill="white" />
+                        <path
+                            d="M17.5237 34.9566H20.8379C21.4098 34.9566 21.8736 34.4929 21.8736 33.9209C21.8736 33.349 21.4098 32.8853 20.8379 32.8853H17.5237C16.9517 32.8853 16.488 33.349 16.488 33.9209C16.488 34.4929 16.9517 34.9566 17.5237 34.9566Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <div class="relative shadow-md bg-white">
+                    <div class="flex flex-col space-y-6 p-8">
+                        <span class="text-blue-500">10. März 2020</span>
+                        <h1 class="font-bold">Bundestagsrede: Kommunen sollen selbst über Rekommunalisierung entscheiden
+                        </h1>
+                        <p>The New York Film Academy is pleased to announce our National Tour for 2020. Come meet us as
+                            we travel the country, conducting Auditions & Portfolio Reviews.</p>
+                        <div class="flex items-center space-x-4">
+                            <p>Read More</p>
+                            <svg width="21" height="22" class="w-4 h-4" viewBox="0 0 21 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.91856 1H20.1408V1.88889H1.91856V1Z" stroke="#3CB4E7" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.4741 19.4444V1.22222H20.363V19.4444H19.4741Z" stroke="#3CB4E7" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.1705 1.82109L1.62854 20.363L1 19.7345L19.5419 1.19255L20.1705 1.82109Z"
+                                    stroke="#3CB4E7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <svg width="60" class="absolute top-0 right-0" height="60" viewBox="0 0 60 60" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="60" height="60" fill="#3CB4E7" />
+                        <path
+                            d="M46.3158 20.1808H38.4446V14.0357C38.4446 13.4637 37.9808 13 37.4089 13H13.0357C12.4637 13 12 13.4637 12 14.0357V40.8255C12 43.6809 14.323 46.0039 17.1784 46.0039H42.173C45.0284 46.0039 47.3515 43.6809 47.3515 40.8255V21.2165C47.3515 20.6445 46.8878 20.1808 46.3158 20.1808ZM17.1784 43.9325C15.4652 43.9325 14.0714 42.5387 14.0714 40.8255V15.0714H36.3732C36.3732 42.4457 36.3601 40.9238 36.3969 41.3141C36.487 42.2743 36.845 43.1797 37.4113 43.9325H17.1784ZM45.2801 40.8255C45.2801 42.5387 43.8863 43.9325 42.173 43.9325C41.9406 43.9325 41.7798 43.9325 41.5516 43.9325C39.8384 43.9325 38.4446 42.5387 38.4446 40.8255V22.2521H45.2801V40.8255Z"
+                            fill="white" />
+                        <path
+                            d="M32.9899 17.9712H17.5237C16.9517 17.9712 16.488 18.4349 16.488 19.0069C16.488 19.5789 16.9517 20.0426 17.5237 20.0426H32.9899C33.5619 20.0426 34.0256 19.5789 34.0256 19.0069C34.0256 18.4349 33.5619 17.9712 32.9899 17.9712Z"
+                            fill="white" />
+                        <path
+                            d="M32.9899 22.3901H17.5237C16.9517 22.3901 16.488 22.8538 16.488 23.4258C16.488 23.9978 16.9517 24.4615 17.5237 24.4615H32.9899C33.5619 24.4615 34.0256 23.9978 34.0256 23.4258C34.0256 22.8538 33.5619 22.3901 32.9899 22.3901Z"
+                            fill="white" />
+                        <path
+                            d="M32.9899 38.9614H17.5237C16.9517 38.9614 16.488 39.4251 16.488 39.9971C16.488 40.5691 16.9517 41.0328 17.5237 41.0328H32.9899C33.5619 41.0328 34.0256 40.5691 34.0256 39.9971C34.0256 39.4251 33.5619 38.9614 32.9899 38.9614Z"
+                            fill="white" />
+                        <path
+                            d="M32.99 26.8091H25.2568C24.6848 26.8091 24.2211 27.2728 24.2211 27.8448V35.5779C24.2211 36.1499 24.6848 36.6136 25.2568 36.6136H32.99C33.5619 36.6136 34.0256 36.1499 34.0256 35.5779V27.8448C34.0256 27.2728 33.5619 26.8091 32.99 26.8091ZM31.9543 34.5422H26.2925V28.8805H31.9543V34.5422Z"
+                            fill="white" />
+                        <path
+                            d="M17.5237 30.5377H20.8379C21.4098 30.5377 21.8736 30.074 21.8736 29.502C21.8736 28.93 21.4098 28.4663 20.8379 28.4663H17.5237C16.9517 28.4663 16.488 28.93 16.488 29.502C16.488 30.074 16.9517 30.5377 17.5237 30.5377Z"
+                            fill="white" />
+                        <path
+                            d="M17.5237 34.9566H20.8379C21.4098 34.9566 21.8736 34.4929 21.8736 33.9209C21.8736 33.349 21.4098 32.8853 20.8379 32.8853H17.5237C16.9517 32.8853 16.488 33.349 16.488 33.9209C16.488 34.4929 16.9517 34.9566 17.5237 34.9566Z"
+                            fill="white" />
+                    </svg>
+                </div>
+            </div>
+            <div class="grid lg:grid-cols-4 gap-5 mt-16 -md:px-4">
+                <div class="relative col-span-2 lg:h-50vh">
+                    <img src="./assets/img/presse1.png" class="object-cover object-center h-full w-full">
+                    <svg width="50" class="absolute right-0 bottom-0" height="50" viewBox="0 0 50 50" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="50" height="50" fill="#25A93D" />
+                        <path
+                            d="M35.8738 20.8471C35.9563 20.4283 35.998 20.008 35.998 19.5918C35.998 15.9571 33.041 13 29.4062 13C27.065 13 24.9129 14.249 23.7358 16.2372C23.2085 16.0348 22.6478 15.9297 22.082 15.9297C19.7578 15.9297 17.8273 17.6481 17.4941 19.8811C14.9882 20.2154 13.0488 22.3669 13.0488 24.9629C13.0488 27.7899 15.3488 30.0898 18.1758 30.0898H22.5703V24.084C22.5703 22.8724 23.556 21.8867 24.7676 21.8867H26.2324C27.444 21.8867 28.4297 22.8724 28.4297 24.084V30.0898H32.8242C35.6512 30.0898 37.9512 27.7899 37.9512 24.9629C37.9512 23.3395 37.1671 21.8079 35.8738 20.8471Z"
+                            fill="white" />
+                        <path
+                            d="M28.8301 32.9923C28.6927 32.7784 28.4484 32.6571 28.1941 32.6571H26.9649V24.084C26.9649 23.6795 26.637 23.3516 26.2325 23.3516H24.7676C24.3632 23.3516 24.0352 23.6795 24.0352 24.084V32.6572H22.8061C22.5518 32.6572 22.3074 32.7784 22.17 32.9924C22.0071 33.2462 22.0153 33.5666 22.1854 33.8096L24.9001 37.6877C25.037 37.8833 25.2613 38 25.5001 38C25.7388 38 25.9631 37.8833 26.1001 37.6876L28.8147 33.8096C28.9848 33.5666 28.9931 33.2462 28.8301 32.9923Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <div class="grid grid-cols-2 gap-5 -md:col-span-2">
+                    <div class="relative">
+                        <img class="object-cover w-full h-full" src="./assets/img/presse2.png">
+                        <svg width="50" class="absolute right-0 bottom-0" height="50" viewBox="0 0 50 50" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="50" height="50" fill="#25A93D" />
+                            <path
+                                d="M35.8738 20.8471C35.9563 20.4283 35.998 20.008 35.998 19.5918C35.998 15.9571 33.041 13 29.4062 13C27.065 13 24.9129 14.249 23.7358 16.2372C23.2085 16.0348 22.6478 15.9297 22.082 15.9297C19.7578 15.9297 17.8273 17.6481 17.4941 19.8811C14.9882 20.2154 13.0488 22.3669 13.0488 24.9629C13.0488 27.7899 15.3488 30.0898 18.1758 30.0898H22.5703V24.084C22.5703 22.8724 23.556 21.8867 24.7676 21.8867H26.2324C27.444 21.8867 28.4297 22.8724 28.4297 24.084V30.0898H32.8242C35.6512 30.0898 37.9512 27.7899 37.9512 24.9629C37.9512 23.3395 37.1671 21.8079 35.8738 20.8471Z"
+                                fill="white" />
+                            <path
+                                d="M28.8301 32.9923C28.6927 32.7784 28.4484 32.6571 28.1941 32.6571H26.9649V24.084C26.9649 23.6795 26.637 23.3516 26.2325 23.3516H24.7676C24.3632 23.3516 24.0352 23.6795 24.0352 24.084V32.6572H22.8061C22.5518 32.6572 22.3074 32.7784 22.17 32.9924C22.0071 33.2462 22.0153 33.5666 22.1854 33.8096L24.9001 37.6877C25.037 37.8833 25.2613 38 25.5001 38C25.7388 38 25.9631 37.8833 26.1001 37.6876L28.8147 33.8096C28.9848 33.5666 28.9931 33.2462 28.8301 32.9923Z"
+                                fill="white" />
+                        </svg>
+
+                    </div>
+                    <div class="relative">
+                        <img class="object-cover w-full h-full" src="./assets/img/presse3.png">
+                        <svg width="50" class="absolute right-0 bottom-0" height="50" viewBox="0 0 50 50" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="50" height="50" fill="#25A93D" />
+                            <path
+                                d="M35.8738 20.8471C35.9563 20.4283 35.998 20.008 35.998 19.5918C35.998 15.9571 33.041 13 29.4062 13C27.065 13 24.9129 14.249 23.7358 16.2372C23.2085 16.0348 22.6478 15.9297 22.082 15.9297C19.7578 15.9297 17.8273 17.6481 17.4941 19.8811C14.9882 20.2154 13.0488 22.3669 13.0488 24.9629C13.0488 27.7899 15.3488 30.0898 18.1758 30.0898H22.5703V24.084C22.5703 22.8724 23.556 21.8867 24.7676 21.8867H26.2324C27.444 21.8867 28.4297 22.8724 28.4297 24.084V30.0898H32.8242C35.6512 30.0898 37.9512 27.7899 37.9512 24.9629C37.9512 23.3395 37.1671 21.8079 35.8738 20.8471Z"
+                                fill="white" />
+                            <path
+                                d="M28.8301 32.9923C28.6927 32.7784 28.4484 32.6571 28.1941 32.6571H26.9649V24.084C26.9649 23.6795 26.637 23.3516 26.2325 23.3516H24.7676C24.3632 23.3516 24.0352 23.6795 24.0352 24.084V32.6572H22.8061C22.5518 32.6572 22.3074 32.7784 22.17 32.9924C22.0071 33.2462 22.0153 33.5666 22.1854 33.8096L24.9001 37.6877C25.037 37.8833 25.2613 38 25.5001 38C25.7388 38 25.9631 37.8833 26.1001 37.6876L28.8147 33.8096C28.9848 33.5666 28.9931 33.2462 28.8301 32.9923Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <div class="relative">
+                        <img class="object-cover w-full h-full" src="./assets/img/presse4.png">
+                        <svg width="50" class="absolute right-0 bottom-0" height="50" viewBox="0 0 50 50" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="50" height="50" fill="#25A93D" />
+                            <path
+                                d="M35.8738 20.8471C35.9563 20.4283 35.998 20.008 35.998 19.5918C35.998 15.9571 33.041 13 29.4062 13C27.065 13 24.9129 14.249 23.7358 16.2372C23.2085 16.0348 22.6478 15.9297 22.082 15.9297C19.7578 15.9297 17.8273 17.6481 17.4941 19.8811C14.9882 20.2154 13.0488 22.3669 13.0488 24.9629C13.0488 27.7899 15.3488 30.0898 18.1758 30.0898H22.5703V24.084C22.5703 22.8724 23.556 21.8867 24.7676 21.8867H26.2324C27.444 21.8867 28.4297 22.8724 28.4297 24.084V30.0898H32.8242C35.6512 30.0898 37.9512 27.7899 37.9512 24.9629C37.9512 23.3395 37.1671 21.8079 35.8738 20.8471Z"
+                                fill="white" />
+                            <path
+                                d="M28.8301 32.9923C28.6927 32.7784 28.4484 32.6571 28.1941 32.6571H26.9649V24.084C26.9649 23.6795 26.637 23.3516 26.2325 23.3516H24.7676C24.3632 23.3516 24.0352 23.6795 24.0352 24.084V32.6572H22.8061C22.5518 32.6572 22.3074 32.7784 22.17 32.9924C22.0071 33.2462 22.0153 33.5666 22.1854 33.8096L24.9001 37.6877C25.037 37.8833 25.2613 38 25.5001 38C25.7388 38 25.9631 37.8833 26.1001 37.6876L28.8147 33.8096C28.9848 33.5666 28.9931 33.2462 28.8301 32.9923Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <div class="relative">
+                        <img class="object-cover w-full h-full" src="./assets/img/presse5.png">
+                        <svg width="50" class="absolute right-0 bottom-0" height="50" viewBox="0 0 50 50" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="50" height="50" fill="#25A93D" />
+                            <path
+                                d="M35.8738 20.8471C35.9563 20.4283 35.998 20.008 35.998 19.5918C35.998 15.9571 33.041 13 29.4062 13C27.065 13 24.9129 14.249 23.7358 16.2372C23.2085 16.0348 22.6478 15.9297 22.082 15.9297C19.7578 15.9297 17.8273 17.6481 17.4941 19.8811C14.9882 20.2154 13.0488 22.3669 13.0488 24.9629C13.0488 27.7899 15.3488 30.0898 18.1758 30.0898H22.5703V24.084C22.5703 22.8724 23.556 21.8867 24.7676 21.8867H26.2324C27.444 21.8867 28.4297 22.8724 28.4297 24.084V30.0898H32.8242C35.6512 30.0898 37.9512 27.7899 37.9512 24.9629C37.9512 23.3395 37.1671 21.8079 35.8738 20.8471Z"
+                                fill="white" />
+                            <path
+                                d="M28.8301 32.9923C28.6927 32.7784 28.4484 32.6571 28.1941 32.6571H26.9649V24.084C26.9649 23.6795 26.637 23.3516 26.2325 23.3516H24.7676C24.3632 23.3516 24.0352 23.6795 24.0352 24.084V32.6572H22.8061C22.5518 32.6572 22.3074 32.7784 22.17 32.9924C22.0071 33.2462 22.0153 33.5666 22.1854 33.8096L24.9001 37.6877C25.037 37.8833 25.2613 38 25.5001 38C25.7388 38 25.9631 37.8833 26.1001 37.6876L28.8147 33.8096C28.9848 33.5666 28.9931 33.2462 28.8301 32.9923Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="relative -md:col-span-2">
+                    <img class="object-cover w-full h-full" src="./assets/img/presse6.png">
+                    <svg width="50" class="absolute right-0 bottom-0" height="50" viewBox="0 0 50 50" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="50" height="50" fill="#25A93D" />
+                        <path
+                            d="M35.8738 20.8471C35.9563 20.4283 35.998 20.008 35.998 19.5918C35.998 15.9571 33.041 13 29.4062 13C27.065 13 24.9129 14.249 23.7358 16.2372C23.2085 16.0348 22.6478 15.9297 22.082 15.9297C19.7578 15.9297 17.8273 17.6481 17.4941 19.8811C14.9882 20.2154 13.0488 22.3669 13.0488 24.9629C13.0488 27.7899 15.3488 30.0898 18.1758 30.0898H22.5703V24.084C22.5703 22.8724 23.556 21.8867 24.7676 21.8867H26.2324C27.444 21.8867 28.4297 22.8724 28.4297 24.084V30.0898H32.8242C35.6512 30.0898 37.9512 27.7899 37.9512 24.9629C37.9512 23.3395 37.1671 21.8079 35.8738 20.8471Z"
+                            fill="white" />
+                        <path
+                            d="M28.8301 32.9923C28.6927 32.7784 28.4484 32.6571 28.1941 32.6571H26.9649V24.084C26.9649 23.6795 26.637 23.3516 26.2325 23.3516H24.7676C24.3632 23.3516 24.0352 23.6795 24.0352 24.084V32.6572H22.8061C22.5518 32.6572 22.3074 32.7784 22.17 32.9924C22.0071 33.2462 22.0153 33.5666 22.1854 33.8096L24.9001 37.6877C25.037 37.8833 25.2613 38 25.5001 38C25.7388 38 25.9631 37.8833 26.1001 37.6876L28.8147 33.8096C28.9848 33.5666 28.9931 33.2462 28.8301 32.9923Z"
+                            fill="white" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto py-16 -lg:px-4">
+        <div class="flex justify-between items-center">
+            <div class="border-l-2 border-green px-4 -ml-5 flex -md:flex-col md:justify-center md:items-center">
+                <h1 class="font-Arvo text-4xl">Twitter</h1>
+                <p class="font-Taviraj text-green md:ml-4 text-xl">@Britta Haßelmann</p>
+            </div>
+            <div class="flex justify-center items-center space-x-1">
+                <svg width="45" height="45" class="cursor-pointer w-8 h-8 prev-twiter" viewBox="0 0 45 45" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle r="21.5" transform="matrix(-1 0 0 1 22.5 22.5)" stroke="#25A93D" stroke-width="2" />
+                    <path d="M22.5879 14.0395L14.4134 22.214L14.8122 22.6128L22.9867 14.4383L22.5879 14.0395Z"
+                        stroke="#25A93D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M22.9867 30.1892L14.8122 22.0147L14.4134 22.4134L22.5879 30.588L22.9867 30.1892Z"
+                        stroke="#25A93D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M14.7684 22.5957H31.4043L31.4043 22.0318L14.7684 22.0318L14.7684 22.5957Z"
+                        stroke="#25A93D" />
+                </svg>
+                <svg width="45" height="45" class="cursor-pointer w-8 h-8 next-twiter" viewBox="0 0 45 45" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="22.5" cy="22.5" r="21.5" stroke="#25A93D" stroke-width="2" />
+                    <path d="M22.4121 14.0395L30.5866 22.214L30.1878 22.6128L22.0133 14.4383L22.4121 14.0395Z"
+                        stroke="#25A93D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M22.0133 30.1892L30.1878 22.0147L30.5866 22.4134L22.4121 30.588L22.0133 30.1892Z"
+                        stroke="#25A93D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M30.2316 22.5957H13.5957L13.5957 22.0318L30.2316 22.0318L30.2316 22.5957Z"
+                        stroke="#25A93D" />
+                </svg>
+            </div>
+        </div>
+        <div class="my-slider space-x-5 mt-16">
+            <div class="w-full md:w-400px shadow -md:mx-auto">
+                <img src="./assets/img/twitter1.png" class="-md:w-full bg-cover">
+                <div class="p-4">
+                    <div class="flex items-center space-x-4 mt-4">
+                        <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.8769 0.390533C23.8615 1.04142 22.7192 1.56213 21.5769 1.69231C20.5615 0.52071 19.2923 0 17.7692 0C14.85 0 12.4385 2.60355 12.5654 5.59763C12.5654 5.98817 12.5654 6.50888 12.6923 6.89941C8.50385 6.63905 4.56923 4.55621 1.90385 1.04142C1.39615 1.95266 1.14231 2.86391 1.26923 3.90533C1.26923 5.72781 2.15769 7.42012 3.55384 8.59172C2.66538 8.59172 1.90385 8.33136 1.14231 7.94083V7.81065C1.14231 10.4142 2.7923 12.7574 5.33077 13.2781C4.82307 13.4083 4.44231 13.5385 3.93461 13.5385C3.55385 13.5385 3.29999 13.5385 2.91923 13.4083C3.55384 15.6213 5.45769 17.1834 7.74231 17.3136C5.96538 18.8757 3.68077 19.6568 1.26923 19.6568C0.888462 19.6568 0.380769 19.6568 0 19.5266C2.41154 21.2189 5.07692 22 7.99615 22C17.6423 22 22.8461 13.5385 22.8461 6.11834V5.46746C23.8615 4.68639 24.75 3.64497 25.3846 2.60355C24.4962 2.99408 23.4808 3.38462 22.3385 3.51479C23.6077 2.73373 24.4962 1.69231 24.8769 0.390533Z" fill="#25A93D"/>
+                        </svg>
+                        <h1 class="text-green font-bold">10. März 2020</h1>
+                    </div>
+                    <div class="mt-4 space-y-4">
+                        <p>„De Vertellbud - He könne mer oss sien“. Danke Helmut Wallrafen für die Initiative, Besuchsverbote in Einrichtungen wenigstens etwas erträglicher zu machen. Denn das  Recht auf Teilhabe muss für alle Menschen gelten. Warum gibt’s das nicht längst überall?</p>
+                        <div class="flex items-center space-x-2">
+                            <p>Read More</p>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.88788 1.40253L17.8732 9.3879L17.4837 9.77743L9.49835 1.79206L9.88788 1.40253Z"
+                                    stroke="#25A93D" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.49835 17.1785L17.4837 9.19313L17.8732 9.58266L9.88788 17.568L9.49835 17.1785Z"
+                                    stroke="#25A93D" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.5264 9.76072H1.27551L1.27551 9.20984L17.5264 9.20984L17.5264 9.76072Z"
+                                    stroke="#25A93D" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full p-4 md:w-300px shadow border-t-4 border-green">
+                <div class="flex items-center space-x-4 mt-4">
+                    <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.8769 0.390533C23.8615 1.04142 22.7192 1.56213 21.5769 1.69231C20.5615 0.52071 19.2923 0 17.7692 0C14.85 0 12.4385 2.60355 12.5654 5.59763C12.5654 5.98817 12.5654 6.50888 12.6923 6.89941C8.50385 6.63905 4.56923 4.55621 1.90385 1.04142C1.39615 1.95266 1.14231 2.86391 1.26923 3.90533C1.26923 5.72781 2.15769 7.42012 3.55384 8.59172C2.66538 8.59172 1.90385 8.33136 1.14231 7.94083V7.81065C1.14231 10.4142 2.7923 12.7574 5.33077 13.2781C4.82307 13.4083 4.44231 13.5385 3.93461 13.5385C3.55385 13.5385 3.29999 13.5385 2.91923 13.4083C3.55384 15.6213 5.45769 17.1834 7.74231 17.3136C5.96538 18.8757 3.68077 19.6568 1.26923 19.6568C0.888462 19.6568 0.380769 19.6568 0 19.5266C2.41154 21.2189 5.07692 22 7.99615 22C17.6423 22 22.8461 13.5385 22.8461 6.11834V5.46746C23.8615 4.68639 24.75 3.64497 25.3846 2.60355C24.4962 2.99408 23.4808 3.38462 22.3385 3.51479C23.6077 2.73373 24.4962 1.69231 24.8769 0.390533Z" fill="#25A93D"/>
+                    </svg>
+                    <h1 class="text-green font-bold">10. März 2020</h1>
+                </div>
+                <div class="mt-8 space-y-8">
+                    <p>„De Vertellbud - He könne mer oss sien“. Danke Helmut Wallrafen für die Initiative, Besuchsverbote in Einrichtungen wenigstens etwas erträglicher zu machen. Denn das  Recht auf Teilhabe muss für alle Menschen gelten. Warum gibt’s das nicht längst überall?</p>
+                    <div class="flex items-center space-x-2">
+                        <p>Read More</p>
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.88788 1.40253L17.8732 9.3879L17.4837 9.77743L9.49835 1.79206L9.88788 1.40253Z"
+                                stroke="#25A93D" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.49835 17.1785L17.4837 9.19313L17.8732 9.58266L9.88788 17.568L9.49835 17.1785Z"
+                                stroke="#25A93D" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.5264 9.76072H1.27551L1.27551 9.20984L17.5264 9.20984L17.5264 9.76072Z"
+                                stroke="#25A93D" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-400px shadow">
+                <img src="./assets/img/twitter2.png" class="-md:w-full bg-cover">
+                <div class="p-4">
+                    <div class="flex items-center space-x-4 mt-4">
+                        <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.8769 0.390533C23.8615 1.04142 22.7192 1.56213 21.5769 1.69231C20.5615 0.52071 19.2923 0 17.7692 0C14.85 0 12.4385 2.60355 12.5654 5.59763C12.5654 5.98817 12.5654 6.50888 12.6923 6.89941C8.50385 6.63905 4.56923 4.55621 1.90385 1.04142C1.39615 1.95266 1.14231 2.86391 1.26923 3.90533C1.26923 5.72781 2.15769 7.42012 3.55384 8.59172C2.66538 8.59172 1.90385 8.33136 1.14231 7.94083V7.81065C1.14231 10.4142 2.7923 12.7574 5.33077 13.2781C4.82307 13.4083 4.44231 13.5385 3.93461 13.5385C3.55385 13.5385 3.29999 13.5385 2.91923 13.4083C3.55384 15.6213 5.45769 17.1834 7.74231 17.3136C5.96538 18.8757 3.68077 19.6568 1.26923 19.6568C0.888462 19.6568 0.380769 19.6568 0 19.5266C2.41154 21.2189 5.07692 22 7.99615 22C17.6423 22 22.8461 13.5385 22.8461 6.11834V5.46746C23.8615 4.68639 24.75 3.64497 25.3846 2.60355C24.4962 2.99408 23.4808 3.38462 22.3385 3.51479C23.6077 2.73373 24.4962 1.69231 24.8769 0.390533Z" fill="#25A93D"/>
+                        </svg>
+                        <h1 class="text-green font-bold">10. März 2020</h1>
+                    </div>
+                    <div class="mt-4 space-y-4">
+                        <p>„De Vertellbud - He könne mer oss sien“. Danke Helmut Wallrafen für die Initiative, Besuchsverbote in Einrichtungen wenigstens etwas erträglicher zu machen. Denn das  Recht auf Teilhabe muss für alle Menschen gelten. Warum gibt’s das nicht längst überall?</p>
+                        <div class="flex items-center space-x-2">
+                            <p>Read More</p>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.88788 1.40253L17.8732 9.3879L17.4837 9.77743L9.49835 1.79206L9.88788 1.40253Z"
+                                    stroke="#25A93D" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.49835 17.1785L17.4837 9.19313L17.8732 9.58266L9.88788 17.568L9.49835 17.1785Z"
+                                    stroke="#25A93D" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.5264 9.76072H1.27551L1.27551 9.20984L17.5264 9.20984L17.5264 9.76072Z"
+                                    stroke="#25A93D" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-400px shadow -md:mx-auto">
+                <img src="./assets/img/twitter1.png" class="-md:w-full bg-cover">
+                <div class="p-4">
+                    <div class="flex items-center space-x-4 mt-4">
+                        <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.8769 0.390533C23.8615 1.04142 22.7192 1.56213 21.5769 1.69231C20.5615 0.52071 19.2923 0 17.7692 0C14.85 0 12.4385 2.60355 12.5654 5.59763C12.5654 5.98817 12.5654 6.50888 12.6923 6.89941C8.50385 6.63905 4.56923 4.55621 1.90385 1.04142C1.39615 1.95266 1.14231 2.86391 1.26923 3.90533C1.26923 5.72781 2.15769 7.42012 3.55384 8.59172C2.66538 8.59172 1.90385 8.33136 1.14231 7.94083V7.81065C1.14231 10.4142 2.7923 12.7574 5.33077 13.2781C4.82307 13.4083 4.44231 13.5385 3.93461 13.5385C3.55385 13.5385 3.29999 13.5385 2.91923 13.4083C3.55384 15.6213 5.45769 17.1834 7.74231 17.3136C5.96538 18.8757 3.68077 19.6568 1.26923 19.6568C0.888462 19.6568 0.380769 19.6568 0 19.5266C2.41154 21.2189 5.07692 22 7.99615 22C17.6423 22 22.8461 13.5385 22.8461 6.11834V5.46746C23.8615 4.68639 24.75 3.64497 25.3846 2.60355C24.4962 2.99408 23.4808 3.38462 22.3385 3.51479C23.6077 2.73373 24.4962 1.69231 24.8769 0.390533Z" fill="#25A93D"/>
+                        </svg>
+                        <h1 class="text-green font-bold">10. März 2020</h1>
+                    </div>
+                    <div class="mt-4 space-y-4">
+                        <p>„De Vertellbud - He könne mer oss sien“. Danke Helmut Wallrafen für die Initiative, Besuchsverbote in Einrichtungen wenigstens etwas erträglicher zu machen. Denn das  Recht auf Teilhabe muss für alle Menschen gelten. Warum gibt’s das nicht längst überall?</p>
+                        <div class="flex items-center space-x-2">
+                            <p>Read More</p>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.88788 1.40253L17.8732 9.3879L17.4837 9.77743L9.49835 1.79206L9.88788 1.40253Z"
+                                    stroke="#25A93D" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.49835 17.1785L17.4837 9.19313L17.8732 9.58266L9.88788 17.568L9.49835 17.1785Z"
+                                    stroke="#25A93D" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.5264 9.76072H1.27551L1.27551 9.20984L17.5264 9.20984L17.5264 9.76072Z"
+                                    stroke="#25A93D" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full p-4 md:w-300px shadow border-t-4 border-green">
+                <div class="flex items-center space-x-4 mt-4">
+                    <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.8769 0.390533C23.8615 1.04142 22.7192 1.56213 21.5769 1.69231C20.5615 0.52071 19.2923 0 17.7692 0C14.85 0 12.4385 2.60355 12.5654 5.59763C12.5654 5.98817 12.5654 6.50888 12.6923 6.89941C8.50385 6.63905 4.56923 4.55621 1.90385 1.04142C1.39615 1.95266 1.14231 2.86391 1.26923 3.90533C1.26923 5.72781 2.15769 7.42012 3.55384 8.59172C2.66538 8.59172 1.90385 8.33136 1.14231 7.94083V7.81065C1.14231 10.4142 2.7923 12.7574 5.33077 13.2781C4.82307 13.4083 4.44231 13.5385 3.93461 13.5385C3.55385 13.5385 3.29999 13.5385 2.91923 13.4083C3.55384 15.6213 5.45769 17.1834 7.74231 17.3136C5.96538 18.8757 3.68077 19.6568 1.26923 19.6568C0.888462 19.6568 0.380769 19.6568 0 19.5266C2.41154 21.2189 5.07692 22 7.99615 22C17.6423 22 22.8461 13.5385 22.8461 6.11834V5.46746C23.8615 4.68639 24.75 3.64497 25.3846 2.60355C24.4962 2.99408 23.4808 3.38462 22.3385 3.51479C23.6077 2.73373 24.4962 1.69231 24.8769 0.390533Z" fill="#25A93D"/>
+                    </svg>
+                    <h1 class="text-green font-bold">10. März 2020</h1>
+                </div>
+                <div class="mt-8 space-y-8">
+                    <p>„De Vertellbud - He könne mer oss sien“. Danke Helmut Wallrafen für die Initiative, Besuchsverbote in Einrichtungen wenigstens etwas erträglicher zu machen. Denn das  Recht auf Teilhabe muss für alle Menschen gelten. Warum gibt’s das nicht längst überall?</p>
+                    <div class="flex items-center space-x-2">
+                        <p>Read More</p>
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.88788 1.40253L17.8732 9.3879L17.4837 9.77743L9.49835 1.79206L9.88788 1.40253Z"
+                                stroke="#25A93D" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.49835 17.1785L17.4837 9.19313L17.8732 9.58266L9.88788 17.568L9.49835 17.1785Z"
+                                stroke="#25A93D" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.5264 9.76072H1.27551L1.27551 9.20984L17.5264 9.20984L17.5264 9.76072Z"
+                                stroke="#25A93D" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-400px shadow">
+                <img src="./assets/img/twitter2.png" class="-md:w-full bg-cover">
+                <div class="p-4">
+                    <div class="flex items-center space-x-4 mt-4">
+                        <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.8769 0.390533C23.8615 1.04142 22.7192 1.56213 21.5769 1.69231C20.5615 0.52071 19.2923 0 17.7692 0C14.85 0 12.4385 2.60355 12.5654 5.59763C12.5654 5.98817 12.5654 6.50888 12.6923 6.89941C8.50385 6.63905 4.56923 4.55621 1.90385 1.04142C1.39615 1.95266 1.14231 2.86391 1.26923 3.90533C1.26923 5.72781 2.15769 7.42012 3.55384 8.59172C2.66538 8.59172 1.90385 8.33136 1.14231 7.94083V7.81065C1.14231 10.4142 2.7923 12.7574 5.33077 13.2781C4.82307 13.4083 4.44231 13.5385 3.93461 13.5385C3.55385 13.5385 3.29999 13.5385 2.91923 13.4083C3.55384 15.6213 5.45769 17.1834 7.74231 17.3136C5.96538 18.8757 3.68077 19.6568 1.26923 19.6568C0.888462 19.6568 0.380769 19.6568 0 19.5266C2.41154 21.2189 5.07692 22 7.99615 22C17.6423 22 22.8461 13.5385 22.8461 6.11834V5.46746C23.8615 4.68639 24.75 3.64497 25.3846 2.60355C24.4962 2.99408 23.4808 3.38462 22.3385 3.51479C23.6077 2.73373 24.4962 1.69231 24.8769 0.390533Z" fill="#25A93D"/>
+                        </svg>
+                        <h1 class="text-green font-bold">10. März 2020</h1>
+                    </div>
+                    <div class="mt-4 space-y-4">
+                        <p>„De Vertellbud - He könne mer oss sien“. Danke Helmut Wallrafen für die Initiative, Besuchsverbote in Einrichtungen wenigstens etwas erträglicher zu machen. Denn das  Recht auf Teilhabe muss für alle Menschen gelten. Warum gibt’s das nicht längst überall?</p>
+                        <div class="flex items-center space-x-2">
+                            <p>Read More</p>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.88788 1.40253L17.8732 9.3879L17.4837 9.77743L9.49835 1.79206L9.88788 1.40253Z"
+                                    stroke="#25A93D" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.49835 17.1785L17.4837 9.19313L17.8732 9.58266L9.88788 17.568L9.49835 17.1785Z"
+                                    stroke="#25A93D" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.5264 9.76072H1.27551L1.27551 9.20984L17.5264 9.20984L17.5264 9.76072Z"
+                                    stroke="#25A93D" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto py-16 -lg:px-4">
+        <div class="grid md:grid-cols-2 mt-8 items-center">
+            <div class="flex flex-col">
+                <div class="border-l-2 border-green px-4 md:-ml-5">
+                    <h1 class="font-Arvo text-2xl md:text-4xl">Kontaktieren Sie mich</h1>
+                </div>
+                <p class="my-5 md:pr-8 lg:pr-32">Pharetra non, blandit amet odio pharetra eu morbi. Amet at malesuada justo nam nullam. Ultricies sem tempus dui quis curabitur neque, fames sit non. Nascetur viverra porta </p>
+                <span class="font-bold md:text-xl">00 897 8765 543</span>
+                <span class="font-bold md:text-xl">firstlastname@email.com</span>
+                <span class="font-bold md:text-xl">Besuchen Sie mich in Berlin</span>
+            </div>
+            <div class="-md:mt-8">
+                <img src="./assets/img/contact.png" class="mx-auto">
+            </div>
+        </div>
+    </div>
+    <div class="bg-green relative -md:py-16 md:h-50vh -lg:px-4">
+        <img src="./assets/img/newsletter.png" class="absolute inset-0 opacity-50 h-full object-cover">
+        <div class="flex flex-col text-white text-center justify-center items-center container mx-auto relative z-10 h-full space-y-4 md:space-y-10">
+            <h1 class="text-4xl md:text-6xl font-Arvo leading-none">Newsletter abonnieren</h1>
+            <p class="md:text-xl text-center">Abonnieren Sie meinen Newsletter,<br class="-md:hidden"/>um regelmäßig Updates zu meinen Themen zu bekommen.</p>
+            <div class="relative">
+                <input type="text" placeholder="Ihre E-Mail-Adresse" class="border border-white py-2 -sm:w-full pl-2 pr-4 focus:outline-none bg-transparent placeholder-white">
+                <button class="bg-white text-green px-4 h-full sm:-ml-4 py-2 -sm:mt-2 border border-white -sm:w-full focus:outline-none">Abonnieren</button>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #171717; -lg:px-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center py-8">
+            <div class="">
+                <img src="./assets/img/logo_footer.png" class="bg-cover -md:mx-auto -sm:w-60p">
+                <ul class="flex -sm:flex-col justify-center items-center sm:space-x-8 text-white mt-4">
+                    <li>Über mich</li>
+                    <li>Mein Wahlkreis </li>
+                    <li>Themen</li>
+                    <li>Kontakt</li>
+                    <li class="flex -md:hidden justify-center items-center space-x-4">
+                        <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.58 0.319527C19.74 0.852071 18.795 1.27811 17.85 1.38462C17.01 0.426036 15.96 0 14.7 0C12.285 0 10.29 2.13018 10.395 4.57988C10.395 4.89941 10.395 5.32544 10.5 5.64497C7.035 5.43195 3.78 3.72781 1.575 0.852071C1.155 1.59763 0.945 2.3432 1.05 3.19527C1.05 4.68639 1.785 6.07101 2.94 7.02959C2.205 7.02959 1.575 6.81657 0.945002 6.49704V6.39053C0.945002 8.52071 2.31 10.4379 4.41 10.8639C3.99 10.9704 3.675 11.0769 3.255 11.0769C2.94 11.0769 2.73 11.0769 2.415 10.9704C2.94 12.7811 4.515 14.0592 6.405 14.1657C4.935 15.4438 3.045 16.0828 1.05 16.0828C0.735 16.0828 0.315 16.0828 0 15.9763C1.995 17.3609 4.2 18 6.615 18C14.595 18 18.9 11.0769 18.9 5.00592V4.47337C19.74 3.83432 20.475 2.98225 21 2.13018C20.265 2.4497 19.425 2.76923 18.48 2.87574C19.53 2.23669 20.265 1.38462 20.58 0.319527Z" fill="#F2F2F2"/>
+                        </svg>
+                        <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M29.3819 3.28673C29.0361 2.00156 28.0228 0.988536 26.7379 0.642469C24.3902 0 14.9997 0 14.9997 0C14.9997 0 5.60941 0 3.26178 0.617978C2.00156 0.963817 0.963588 2.00179 0.61775 3.28673C0 5.63413 0 10.5024 0 10.5024C0 10.5024 0 15.3952 0.61775 17.7181C0.963817 19.0031 1.97684 20.0163 3.26201 20.3624C5.63413 21.0049 14.9999 21.0049 14.9999 21.0049C14.9999 21.0049 24.3902 21.0049 26.7379 20.3869C28.023 20.041 29.0361 19.0278 29.3821 17.7428C29.9999 15.3952 29.9999 10.5271 29.9999 10.5271C29.9999 10.5271 30.0246 5.63413 29.3819 3.28673Z" fill="#282828"/>
+                            <path d="M12.0097 14.9999L19.8185 10.5024L12.0097 6.00488V14.9999Z" fill="white"/>
+                        </svg>
+                        <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.58975 6.01521V4.41521V3.91521C5.58975 3.81521 5.68955 3.61521 5.68955 3.51521C5.78835 3.41521 5.88915 3.31521 6.08875 3.21521C6.28735 3.11521 6.58774 3.11521 6.78634 3.11521H8.28333V0.0152063H5.78835C4.69156 -0.0847937 3.49297 0.315206 2.69558 1.01521C1.99598 1.91521 1.69758 2.91521 1.79738 4.01521V5.91521H0V9.01521H1.79738V18.1152H5.48895V9.01521H7.98393L8.28333 5.91521H5.58975V6.01521Z" fill="#F2F2F2"/>
+                        </svg>
+                                                             
+                    </li>
+                </ul>
+            </div>
+            <div class="text-right text-white">
+                <div class="flex -md:mt-4 justify-center md:justify-end items-center space-x-4">
+                    <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.58975 6.01521V4.41521V3.91521C5.58975 3.81521 5.68955 3.61521 5.68955 3.51521C5.78835 3.41521 5.88915 3.31521 6.08875 3.21521C6.28735 3.11521 6.58774 3.11521 6.78634 3.11521H8.28333V0.0152063H5.78835C4.69156 -0.0847937 3.49297 0.315206 2.69558 1.01521C1.99598 1.91521 1.69758 2.91521 1.79738 4.01521V5.91521H0V9.01521H1.79738V18.1152H5.48895V9.01521H7.98393L8.28333 5.91521H5.58975V6.01521Z" fill="#3CB4E7"/>
+                    </svg>
+                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6047 0.313C18.8123 0.803 17.935 1.163 17.0019 1.353C16.2444 0.495 15.1566 0.00300039 14.0129 3.90448e-07C11.7515 -0.00099961 9.91718 1.919 9.91718 4.287C9.91718 4.624 9.95411 4.951 10.023 5.264C6.61982 5.085 3.60289 3.377 1.58295 0.784C1.21769 1.443 1.02707 2.185 1.03006 2.939C1.03006 4.427 1.75361 5.739 2.8514 6.509C2.19771 6.486 1.56 6.3 0.996132 5.969V6.022C0.996132 8.102 2.40829 9.832 4.28052 10.229C3.92923 10.329 3.56696 10.378 3.20269 10.377C2.93723 10.377 2.68174 10.353 2.43124 10.302C2.9522 12.005 4.46415 13.244 6.25555 13.28C4.56395 14.682 2.37136 15.324 0.192749 15.056C2.04602 16.312 4.23262 16.984 6.47012 16.986C14.003 16.986 18.1217 10.451 18.1217 4.781L18.1087 4.226C18.9181 3.615 19.6107 2.865 20.1546 2.009C19.4101 2.354 18.6167 2.581 17.8023 2.684C18.6676 2.135 19.3063 1.293 19.6047 0.313Z" fill="#3CB4E7"/>
+                    </svg>
+                    <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5274 8.86295C15.5274 8.55495 15.3816 8.27295 15.1461 8.13195L10.5434 5.34995C10.3288 5.21695 10.0544 5.22795 9.84978 5.37795C9.63022 5.54495 9.50447 5.80595 9.51046 6.08195V11.662C9.51046 11.95 9.6392 12.218 9.85077 12.367C10.0564 12.515 10.3298 12.525 10.5454 12.393L15.1481 9.59295C15.3816 9.44995 15.5283 9.16795 15.5274 8.86295ZM24 6.773V11.193C24 13.995 23.6208 15.614 22.7296 16.606C21.8623 17.572 20.52 17.967 18.0989 17.967H5.96633C0.977371 17.967 0.064209 15.686 0.064209 11.194V6.773C0.064209 4.452 0.064209 2.777 0.833661 1.639C1.62207 0.473 3.10908 0 5.96633 0H18.0989C20.8913 0 22.3534 0.446 23.1448 1.541C23.9412 2.641 24 4.327 24 6.773Z" fill="#3CB4E7"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col justify-center items-center space-x-8 text-white mt-4">
+                    <p class="text-xs">Britta Hasselmann 2020. All rights reserved</p>  
+                    <div class="text-xs space-x-4">
+                        <a href="#" class="underline">Privacy Policy</a>
+                        <a href="#" class="underline">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script>
+    var slider = tns({
+        container: '.my-slider',
+        // slideBy: 1,
+        // center : true,
+        nextButton : '.prev-twiter',
+        prevButton : '.prev-twiter',
+        mouseDrag : true,
+        controls : false,
+        speed: 400,
+        responsive: {
+            765: {
+                items: 2
+            },
+            1022: {
+                items: 3
+            }
+        },
+    });
+    const nav = document.querySelector('#nav');
+    const menu1 = document.querySelector('.menu1');
+    const menu2 = document.querySelector('.menu2');
+    const togle = () =>{
+        menu1.classList.toggle("-lg:hidden")
+        menu2.classList.toggle("-lg:hidden")
+    }
+</script>
+
+</body>
+
+</html>
